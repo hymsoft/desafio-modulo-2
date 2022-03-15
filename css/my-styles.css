@@ -1,0 +1,234 @@
+/* ========================================================
+   Progress bars
+   ===================================================== */
+.container__progress {
+  margin: 10px auto 0 auto;
+  width: 80%;
+}
+
+.progress {
+  padding: 2px;
+  margin-bottom: 10px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08);
+}
+
+.progress-bar {
+  font-size: 14px;
+  color: #111;
+  text-align: left;
+  text-indent: 6px;
+  position: relative;
+  height: 12px;
+  border-radius: 4px;
+  -webkit-transition: 0.4s linear;
+  -moz-transition: 0.4s linear;
+  -ms-transition: 0.4s linear;
+  -o-transition: 0.4s linear;
+  transition: 0.4s linear;
+  -webkit-transition-property: width, background-color;
+  -moz-transition-property: width, background-color;
+  -ms-transition-property: width, background-color;
+  -o-transition-property: width, background-color;
+  transition-property: width, background-color;
+  -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25),
+    inset 0 1px rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.25),
+    inset 0 1px rgba(255, 255, 255, 0.1);
+}
+.progress-bar:before,
+.progress-bar:after {
+  content: "";
+  top: 0;
+  right: 0;
+  left: 0;
+  position: absolute;
+}
+.progress-bar:before {
+  bottom: 0;
+  z-index: 2;
+  background: url("../img/stripes.png") 0 0 repeat;
+  border-radius: 4px 4px 0 0;
+}
+.progress-bar:after {
+  bottom: 45%;
+  z-index: 3;
+  border-radius: 4px;
+  background-color: transparent;
+  background-image: -webkit-gradient(
+    linear,
+    left top,
+    left bottom,
+    color-stop(0%, rgba(255, 255, 255, 0.3)),
+    color-stop(100%, rgba(255, 255, 255, 0.05))
+  );
+  background-image: -webkit-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  background-image: -moz-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  background-image: -ms-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  background-image: -o-linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+  background-image: linear-gradient(
+    top,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.05)
+  );
+}
+
+.progress-bar {
+  background-color: #222;
+}
+
+.cien > .progress-bar {
+  background-color: #2652dc;
+  width: 100%;
+  -moz-animation: cien 2s ease-out;
+  -webkit-animation: cien 2s ease-out;
+}
+@-moz-keyframes cien {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes cien {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+.ochenta > .progress-bar {
+  background-color: #2652dc;
+  width: 80%;
+  -moz-animation: ochenta 2s ease-out;
+  -webkit-animation: ochenta 2s ease-out;
+}
+@-moz-keyframes ochenta {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 80%;
+  }
+}
+@-webkit-keyframes ochenta {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 80%;
+  }
+}
+
+.sesenta > .progress-bar {
+  background-color: #2652dc;
+  width: 60%;
+  -moz-animation: sesenta 2s ease-out;
+  -webkit-animation: sesenta 2s ease-out;
+}
+@-moz-keyframes sesenta {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+@-webkit-keyframes sesenta {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 60%;
+  }
+}
+
+.cuarenta > .progress-bar {
+  background-color: #2652dc;
+  width: 40%;
+  -moz-animation: cuarenta 2s ease-out;
+  -webkit-animation: cuarenta 2s ease-out;
+}
+@-moz-keyframes cuarenta {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 40%;
+  }
+}
+@-webkit-keyframes cuarenta {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 40%;
+  }
+}
+
+.veinte > .progress-bar {
+  background-color: #2652dc;
+  width: 20%;
+  -moz-animation: veinte 2s ease-out;
+  -webkit-animation: veinte 2s ease-out;
+}
+@-moz-keyframes veinte {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 20%;
+  }
+}
+@-webkit-keyframes veinte {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+.left-div {
+  display: inline-block;
+  width: 9%;
+  text-align: right;
+  padding: 3px;
+  vertical-align: center;
+}
+
+.middle-div {
+  display: inline-block;
+  width: 79%;
+  text-align: left;
+}
+.right-div {
+  display: inline-block;
+  width: 9%;
+  text-align: left;
+  padding: 3px;
+  vertical-align: center;
+}
