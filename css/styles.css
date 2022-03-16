@@ -10,8 +10,25 @@
     that don't come from third party libraries. This file gets compiled using
     Gulp and send to the /css folder which is then loaded on the page.
 */
+:root {
+  --overlay: rgba(33, 125, 187, 0.8);
+  --header-menu: #fff;
+  --primary-color: #3498db;
+  --text-color: #2e7af2;
+  --strong-color: #2c3ae8;
+  --separator-color: #f2f2f5;
+  --separator-line-color: #dcd9d9;
+  --lead-title-color: #fff;
+  --lead-subtitle-color: #a0cfee;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  font-family: "Lato", sans-serif;
+  /* font-family: "Lato", sans-serif; */
+  font-family: "Nunito", sans-serif;
   font-size: 16px;
   box-sizing: border-box;
 }
@@ -62,14 +79,14 @@ header {
   right: 0;
   text-align: center;
   z-index: 10;
-  animation-name: dropHeader;
-  animation-iteration-count: 1;
-  animation-timing-function: ease;
-  animation-duration: 0.75s;
+  /* animation-name: dropHeader; */
+  /* animation-iteration-count: 1; */
+  /* animation-timing-function: ease; */
+  /* animation-duration: 0.75s; */
 }
 header ul {
   display: inline-block;
-  background: #fff;
+  background: var(--header-menu);
   text-align: center;
   padding: 10px;
   margin: 0;
@@ -81,18 +98,18 @@ header li {
 }
 header a {
   display: block;
-  color: #3498db;
+  color: var(--primary-color);
   padding: 10px;
+  text-decoration: none;
 }
 header a:hover {
-  color: #217dbb;
-  text-decoration: none;
-  background: #eee;
+  /* color: #217dbb; */
+  color: var(--strong-color);
+  background: var(--primary-color);
   border-radius: 4px;
 }
 header a:focus {
-  color: #3498db;
-  text-decoration: none;
+  color: var(--strong-color);
 }
 header.active {
   display: block;
@@ -110,12 +127,12 @@ header.sticky {
   position: fixed;
   right: 15px;
   top: 10px;
-  color: #3498db;
+  color: var(--strong-color);
   font-size: 1.5em;
   z-index: 20;
   padding: 0 7px;
   border-radius: 4px;
-  background: #fff;
+  background-color: var(--primary-color);
 }
 #mobile-menu-close {
   display: none;
@@ -143,7 +160,7 @@ footer {
 }
 .copyright p {
   margin: 0;
-  color: #74808a;
+  color: var(--primary-color);
 }
 .top {
   text-align: center;
@@ -155,11 +172,11 @@ footer {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  border: 3px solid #b9bfc4;
+  border: 3px solid var(--primary-color);
   text-align: center;
 }
 .top i {
-  color: #74808a;
+  color: var(--primary-color);
 }
 .social {
   text-align: right;
@@ -175,11 +192,11 @@ footer {
 }
 .social a {
   display: block;
-  color: #74808a;
+  color: var(--primary-color);
   padding: 10px;
 }
 .social a:hover {
-  color: #3498db;
+  color: var(--strong-color);
 }
 .btn-rounded-white {
   display: inline-block;
@@ -216,10 +233,10 @@ footer {
   left: 0;
   right: 0;
   margin: 0 auto;
-  background: #3498db;
+  background: var(--primary-color);
 }
 .background-alt {
-  background: #f2f2f5;
+  background: var(--separator-color);
 }
 #lead {
   position: relative;
@@ -244,7 +261,7 @@ footer {
   margin: 0;
 }
 #lead-content h1 {
-  color: #fff;
+  color: var(--lead-title-color);
   font-weight: 900;
   font-size: 5em;
   text-transform: uppercase;
@@ -252,7 +269,7 @@ footer {
   line-height: 0.9em;
 }
 #lead-content h2 {
-  color: #a0cfee;
+  color: var(--lead-subtitle-color);
   font-weight: 500;
   font-size: 2.25em;
   margin-bottom: 15px;
@@ -265,7 +282,7 @@ footer {
   right: 0;
   bottom: 0;
   left: 0;
-  background: rgba(33, 125, 187, 0.8);
+  background: var(--overlay);
   z-index: 1;
 }
 #lead-down {
@@ -276,7 +293,7 @@ footer {
   text-align: center;
   z-index: 10;
   bottom: 15px;
-  color: #fff;
+  color: var(--lead-subtitle-color);
 }
 #lead-down span {
   cursor: pointer;
@@ -285,7 +302,7 @@ footer {
   width: 35px;
   height: 35px;
   border-radius: 50%;
-  border: 3px solid #a0cfee;
+  border: 3px solid var(--lead-subtitle-color);
   text-align: center;
 }
 #lead-down i {
@@ -306,26 +323,26 @@ footer {
 }
 #about {
   padding: 75px 15px;
-  border-bottom: 1px solid #dcd9d9;
+  border-bottom: 1px solid var(--separator-line-color);
 }
 #about h2 {
-  color: #374054;
+  color: var(--strong-color);
 }
 #about p {
-  color: #74808a;
+  color: var(--text-color);
   margin: 0;
 }
 #about li {
-  color: #74808a;
+  color: var(--text-color);
   text-align: start;
 }
 #experience {
   padding: 50px 15px;
   text-align: center;
-  border-bottom: 1px solid #dcd9d9;
+  border-bottom: 1px solid var(--separator-line-color);
 }
 #experience h2 {
-  color: #374054;
+  color: var(--strong-color);
 }
 #experience-timeline {
   margin: 30px auto 0 auto;
@@ -341,7 +358,8 @@ footer {
   right: auto;
   height: 100%;
   width: 3px;
-  background: #3498db;
+  /* background: #3498db; */
+  background: var(--primary-color);
   z-index: 0;
 }
 #experience-timeline:after {
@@ -349,8 +367,12 @@ footer {
   content: "";
   width: 3px;
   height: 40px;
-  background: #3498db;
-  background: linear-gradient(to bottom, #3498db, rgba(52, 152, 219, 0));
+  background: var(--primary-color);
+  background: linear-gradient(
+    to bottom,
+    var(--primary-color),
+    rgba(52, 152, 219, 0)
+  );
   top: 100%;
   left: 303px;
 }
@@ -365,25 +387,25 @@ footer {
 .vtimeline-content h3 {
   font-size: 1.5em;
   font-weight: 300;
-  color: #374054;
+  color: var(--strong-color);
   display: inline-block;
   margin: 0;
 }
 .vtimeline-content h4 {
   font-size: 1.2em;
   font-weight: 300;
-  color: #7e8890;
+  color: var(--primary-color);
   margin: 0 0 15px 0;
 }
 .vtimeline-content p {
-  color: #74808a;
+  color: var(--text-color);
   font-size: 0.9em;
   margin: 0;
 }
 .vtimeline-point {
   position: relative;
   display: block;
-  vertical-align: top;
+  /* vertical-align: top; */
   margin-bottom: 30px;
 }
 .vtimeline-icon {
@@ -391,7 +413,7 @@ footer {
   color: #fff;
   width: 50px;
   height: 50px;
-  background: #3498db;
+  background: var(--primary-color);
   border-radius: 50%;
   float: left;
   z-index: 99;
@@ -409,7 +431,7 @@ footer {
   left: 0;
   top: 10px;
   font-weight: 300;
-  color: #374054;
+  color: var(--strong-color);
 }
 #education,
 #courses,
@@ -421,7 +443,7 @@ footer {
 #education h2,
 #courses h2,
 #skills h2 {
-  color: #374054;
+  color: var(--strong-color);
   margin-bottom: 50px;
 }
 .education-block,
@@ -436,14 +458,15 @@ footer {
   font-weight: 500;
   float: left;
   margin: 0;
-  color: #374054;
+  color: var(--strong-color);
 }
 .education-block span {
-  color: #74808a;
+  color: var(--primary-color);
   float: right;
 }
 .education-block h4 {
-  color: #74808a;
+  color: var(--strong-color);
+  opacity: 0.7;
   clear: both;
   font-weight: 500;
   margin: 0 0 15px 0;
@@ -451,7 +474,7 @@ footer {
 .education-block p,
 .education-block ul {
   margin: 0;
-  color: #74808a;
+  color: var(--text-color);
   font-size: 0.9em;
 }
 .education-block ul {
@@ -461,7 +484,7 @@ footer {
 .skill-block h3 {
   font-weight: 500;
   margin: 0;
-  color: #374054;
+  color: var(--strong-color);
 }
 #projects {
   padding: 50px 15px;
@@ -469,7 +492,7 @@ footer {
   text-align: center;
 }
 #projects h2 {
-  color: #374054;
+  color: var(--strong-color);
   margin-bottom: 50px;
 }
 .project {
@@ -493,11 +516,12 @@ footer {
 .project-info h3 {
   font-size: 1.5em;
   font-weight: 300;
-  color: #374054;
+  color: var(--strong-color);
+  opacity: 0.8;
   margin: 0 0 15px 0;
 }
 .project-info p {
-  color: #74808a;
+  color: var(--text-color);
   margin: 0 0 15px 0;
   font-size: 0.9em;
 }
@@ -513,12 +537,12 @@ footer {
 
 #contact {
   padding: 50px 15px;
-  background: #3498db;
+  background: var(--primary-color);
   text-align: center;
 }
 #contact h2 {
   margin: 0 0 15px 0;
-  color: #fff;
+  color: var(--lead-title-color);
   font-weight: 500;
 }
 #contact-form {
@@ -533,7 +557,7 @@ footer {
   border-radius: 4px;
   border: none;
   margin-bottom: 10px;
-  background: #1d6fa5;
+  background: var(--text-color);
   color: #fff;
   transition: 0.5s ease all;
 }
@@ -558,7 +582,7 @@ footer {
 #contact-form input:focus,
 #contact-form textarea:focus {
   outline: none;
-  background: #16527a;
+  background: var(--strong-color);
 }
 #contact-form textarea {
   height: 150px;
@@ -571,12 +595,13 @@ footer {
   border-radius: 4px;
   padding: 5px 10px;
   border: none;
-  color: #3498db;
+  color: var(--primary-color);
   font-weight: 700;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: 0.5s ease all;
 }
 #contact-form button:hover {
+  color: var(--strong-color);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
 }
 .optional-section {

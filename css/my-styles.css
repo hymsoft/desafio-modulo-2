@@ -1,3 +1,29 @@
+.profile__img {
+  width: 200px;
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 1em;
+}
+
+#skills .skill-block h4 {
+  font-size: 0.9rem;
+  color: var(--strong-color);
+  opacity: 0.8;
+}
+
+.my-btn {
+  display: inline-block;
+  color: var(--primary-color);
+  padding: 10px;
+  text-decoration: none;
+}
+
+.my-btn:hover {
+  color: var(--strong-color);
+  /* background: var(--primary-color); */
+  border-radius: 4px;
+}
+
 /* ========================================================
    Progress bars
    ===================================================== */
@@ -98,123 +124,33 @@
 }
 
 .cien > .progress-bar {
-  background-color: #2652dc;
+  background-color: var(--primary-color);
   width: 100%;
-  -moz-animation: cien 2s ease-out;
-  -webkit-animation: cien 2s ease-out;
-}
-@-moz-keyframes cien {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@-webkit-keyframes cien {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 100%;
-  }
 }
 
 .ochenta > .progress-bar {
-  background-color: #2652dc;
+  background-color: var(--primary-color);
   width: 80%;
-  -moz-animation: ochenta 2s ease-out;
-  -webkit-animation: ochenta 2s ease-out;
-}
-@-moz-keyframes ochenta {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 80%;
-  }
-}
-@-webkit-keyframes ochenta {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 80%;
-  }
 }
 
 .sesenta > .progress-bar {
-  background-color: #2652dc;
+  background-color: var(--primary-color);
   width: 60%;
-  -moz-animation: sesenta 2s ease-out;
-  -webkit-animation: sesenta 2s ease-out;
-}
-@-moz-keyframes sesenta {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 60%;
-  }
-}
-@-webkit-keyframes sesenta {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 60%;
-  }
 }
 
 .cuarenta > .progress-bar {
-  background-color: #2652dc;
+  background-color: var(--primary-color);
   width: 40%;
-  -moz-animation: cuarenta 2s ease-out;
-  -webkit-animation: cuarenta 2s ease-out;
-}
-@-moz-keyframes cuarenta {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 40%;
-  }
-}
-@-webkit-keyframes cuarenta {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 40%;
-  }
 }
 
 .veinte > .progress-bar {
-  background-color: #2652dc;
+  background-color: var(--primary-color);
   width: 20%;
-  -moz-animation: veinte 2s ease-out;
-  -webkit-animation: veinte 2s ease-out;
-}
-@-moz-keyframes veinte {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 20%;
-  }
-}
-@-webkit-keyframes veinte {
-  0% {
-    width: 0px;
-  }
-  100% {
-    width: 20%;
-  }
 }
 
 .left-div {
   display: inline-block;
-  width: 9%;
+  width: 5%;
   text-align: right;
   padding: 3px;
   vertical-align: center;
@@ -222,12 +158,12 @@
 
 .middle-div {
   display: inline-block;
-  width: 79%;
+  width: 80%;
   text-align: left;
 }
 .right-div {
   display: inline-block;
-  width: 9%;
+  width: 5%;
   text-align: left;
   padding: 3px;
   vertical-align: center;
